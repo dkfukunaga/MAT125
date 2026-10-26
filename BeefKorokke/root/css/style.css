@@ -1,56 +1,98 @@
-html {
+/* global style */
+
+* {
     box-sizing: border-box;
 }
+
+/* base styles */
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.25;
-    background-color: ivory;
-    box-sizing: border-box;
-    margin: 0 20%;
-}
-header {
-    background-color: linen;
-    padding: 2rem 4rem 0;
-}
-main {
-    padding: 1rem 5rem 0;
-    background-color: linen;
-}
-footer {
-    padding: 0 4rem;
     margin: 0;
-    background-color: linen;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #663333;
 }
-.footerelement {
-    padding: 0;
-}
+
 h1, h2 {
     font-family: Georgia, "Times New Roman", serif;
     color: #333366;
 }
-h1 {
-    text-align: center;
-}
-p, h2 {
-    padding: 0 5%;
-}
-img {
-    padding: 0 5% 1% 1%;
-}
+
+/* element styles */ 
+
 hr.thickline {
-    /*height: 3px;*/
     border: 3px solid #333366;
-    background-color: linen;
+    border-radius: 3px;
     margin: 0;
 }
-img {
-    float: right;
-    margin: 0 12px;
+
+#site-header {
+    text-shadow: 2px 2px 4px #333366;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    padding: 2rem 3rem 1px;
 }
-ul.ingredients {
-    padding: 0 5%;
-    margin-left: 5%;
+
+h2 {
+    text-decoration: underline;
+}
+
+.column { /* main center column */
+    background-color: Ivory;
+    max-width: 50rem;
+    margin-block: -1px;
+    margin-inline: auto;
+    padding: 1rem 3rem 0;
+}
+
+.column-text { /* extra indentation for main text */
+    padding: 1rem 6rem;
+}
+
+/* figure styling */
+
+figure {
+    width: min-content;
+    float: right;
+    margin: 0;
+    padding: 0 0 1rem 1rem;
+}
+
+figure img {
+    width: 384px;
+}
+
+figcaption {
+    font-size: 0.9em;
+    margin-inline: 1rem;
+}
+
+/* list styling */
+
+ul {
+    list-style: none;
+}
+
+ul ul {
+    list-style-type: disc;
+}
+
+/* footer styling */
+
+.column-footer {
+    padding: 1rem 3rem;
+}
+
+.footer-section {
+    border-top: solid;
+    border-color: #333366;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-element {
+    font-size: 0.9em;
+    color: #333366;
 }
