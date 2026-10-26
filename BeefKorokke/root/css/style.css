@@ -6,12 +6,18 @@
 
 /* base styles */
 
+html {
+    background-color: #663333;
+}
+
 body {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.25;
     min-height: 100dvh;
-    margin: 0;
-    background-color: #663333;
+    background-color: Ivory;
+    max-width: 50rem;
+    margin-block: -1px;
+    margin-inline: auto;
 }
 
 h1, h2 {
@@ -37,14 +43,6 @@ hr.thickline {
 
 h2 {
     text-decoration: underline;
-}
-
-.column { /* main center column */
-    background-color: Ivory;
-    max-width: 50rem;
-    margin-block: -1px;
-    margin-inline: auto;
-    padding: 1rem 3rem 0;
 }
 
 .column-text { /* extra indentation for main text */
