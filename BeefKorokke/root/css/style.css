@@ -9,6 +9,7 @@
 body {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.25;
+    min-height: 100dvh;
     margin: 0;
     background-color: #663333;
 }
