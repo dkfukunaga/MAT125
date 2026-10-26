@@ -10,13 +10,13 @@ html {
     background-color: #663333;
 }
 
-body {
+body { /* center column */
+    background-color: Ivory;
     font-family: Helvetica, Arial, sans-serif;
     line-height: 1.25;
     min-height: 100dvh;
-    background-color: Ivory;
     max-width: 50rem;
-    margin-block: -1px;
+    margin-block: 0;
     margin-inline: auto;
 }
 
@@ -25,7 +25,15 @@ h1, h2 {
     color: #333366;
 }
 
-/* element styles */ 
+/* header styling */
+
+#column-header {
+    text-shadow: 2px 2px 4px #333366;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    padding: 2rem 3rem;
+}
 
 hr.thickline {
     border: 3px solid #333366;
@@ -33,27 +41,21 @@ hr.thickline {
     margin: 0;
 }
 
-#site-header {
-    text-shadow: 2px 2px 4px #333366;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: 0.2em;
-    padding: 2rem 3rem 1px;
+/* main column text styling */
+
+.column-text { /* extra indentation for main text */
+    padding: 1rem 6rem;
 }
 
 h2 {
     text-decoration: underline;
 }
 
-.column-text { /* extra indentation for main text */
-    padding: 1rem 6rem;
-}
-
 /* figure styling */
 
 figure {
-    width: min-content;
     float: right;
+    width: min-content;
     margin: 0;
     padding: 0 0 1rem 1rem;
 }
