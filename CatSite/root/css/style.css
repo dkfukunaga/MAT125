@@ -1,0 +1,248 @@
+/* global styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: dashed 1px;*/
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+html {
+    background-color: #330000;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    background-color: ivory;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* header style */
+
+header {
+    background-color: #663333;
+    color: ivory;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-bottom: 10px;
+}
+
+figure.logo {
+    display: flex;
+    flex-direction: row; /* image and text side by side */
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 20px;
+    margin-bottom: 10px;
+}
+
+figure.logo img {
+    flex: 0 0 33%;
+    max-width: 200px;
+    min-width: 100px;
+    height: auto;
+}
+
+figure.logo figcaption {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-inline: auto;
+    padding-left: 20px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px;
+    gap: 5px;
+}
+
+.nav-item {
+    text-align: center;
+    text-decoration: none;
+    color: ivory;
+    font-weight: bold;
+    border: solid 1px;
+    border-radius: 8px;
+    display: block;
+    width: calc(100% - 40px);
+    /*margin: 0 20px;*/
+    padding: 5px;
+}
+
+/* main section styles */
+
+main h1 {
+    color: #660000;
+    text-align: center;
+    align-self: stretch;
+    margin: 0 20px 10px;
+    border-bottom: 6px double #660000;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* article styles */
+
+article {
+    border: solid 2px #660000;
+    border-radius: 12px;
+    background-color: antiquewhite;
+    /*margin: 0 20px 10px;*/
+    flex: 1 1 330px;
+    max-width: 434px;
+    display: flex;
+    flex-direction: column;
+}
+
+article h2,
+article p,
+article figcaption {
+    padding: 0 25px 10px;
+}
+
+article figure img {
+    border-radius: 10px 10px 0 0;
+}
+
+article figcaption {
+    font-size: 0.65rem;
+    font-style: italic;
+}
+
+article h2 {
+    color: #660000;
+}
+
+article h2,
+article a.card-link {
+    text-align: center;
+}
+
+article a.card-link {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+article h2,
+article p {
+    padding: 0 15px 0;
+    margin-bottom: 10px;
+}
+
+/* footer styles */
+
+footer {
+    background-color: #663333;
+    color: ivory;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    text-align: center;
+    padding-block: 30px;
+}
+
+.footer-section {
+    margin-top: 10px;
+    padding-inline: 20px;
+}
+
+footer a {
+    color: #66cccc;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #99cccc;
+}
+
+footer a:visited {
+    color: #9999ff;
+}
+
+/* media breakpoint at 440px */
+/* this is where the nav links become too wide for a single column
+ * and wide enough for two columns to make sense */
+
+@media (min-width: 440px) {
+    .nav-bar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-inline: auto;
+        width: 100%;
+        padding: 0 20px;
+        gap: 10px;
+    }
+    
+    .nav-item {
+        flex: 1 1 calc(50% - 40px);
+        width: auto;
+        margin: 0;
+    }
+    
+    main h1 {
+        margin-inline: 20px;
+    }
+    
+    /* adjust hero section to have wrapping rows, although
+     * they don't start wrapping until wider than 440px */
+    .hero {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        margin: 30px;
+    }
+}
+
+/* this is the standard tablet width, which is also a good width
+ * to have the nav bar become fully horizontal */
+@media (min-width: 768px) {
+    figure.logo {
+        width: 100%;
+        max-width: 934px;
+        margin-inline: auto;
+    }
+    
+    .nav-bar {
+        flex-wrap: nowrap;
+        max-width: 934px;
+    }
+    
+    main {
+        width: 100%;
+        max-width: 934px;
+        margin-inline: auto;
+    }
+    
+    /* footer can switch to a more horiztonal layout here too */
+    footer {
+        text-align: left;
+    }
+    
+    .footer-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 934px;
+        margin-inline: auto;
+    }
+}
